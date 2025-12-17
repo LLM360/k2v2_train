@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=k2gem-70b
+#SBATCH --job-name=k2v2-pre-train
 #SBATCH --nodes=400
 #SBATCH --ntasks=400
 #SBATCH --cpus-per-task=96        # cpu-cores per task (>1 if multi-threaded tasks)
