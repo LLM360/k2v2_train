@@ -1,6 +1,6 @@
 # K2V2 SFT
 
-Supervised Fine-Tuning scripts for K2V2. This stage comes after pre-training and before RL.
+Supervised Fine-Tuning scripts for K2V2. With the SFT data, you should also be able to reproduce the run by following the hyperparameter specified in the [training script](training_scripts/train_k2_k2v2_sft.sh)
 
 ## Dependencies
 
@@ -13,12 +13,12 @@ pip install -e .
 pip install vllm>=0.8.2
 ```
 
+In this version we mainly fixed some problems related to loss masks.
+
 ## Data Preparation
 
-See [`sft_data/`](sft_data/) for dataset preparation:
-- Uses [TxT360-3efforts](https://huggingface.co/datasets/LLM360/TxT360-3efforts) as base dataset
-- `create_sft_mix_3efforts.py` - create weighted SFT mixture
-- `mix_3efforts.json` - dataset weights
+To reproduce our SFT run, one can directly use the weighted data uploaded at [TxT360-3efforts](https://huggingface.co/datasets/LLM360/TxT360-3efforts)
+See [`sft_data/`](sft_data/) for our data mixing methods for dataset preparation. 
 
 ## Training
 
